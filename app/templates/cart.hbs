@@ -1,5 +1,6 @@
 {{page-title "Cart"}}
-<main class="container mt-5">
+
+<GeneralContainer>
     <h1>Shopping Cart</h1>
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
@@ -15,7 +16,7 @@
                 Subtotal
             </div>
             <span class="col d-flex flex-row-reverse">
-                100
+                {{this.subtotal}}
             </span>
         </div>
         <div class="row w-50 d-flex align-self-end">
@@ -23,7 +24,7 @@
                 Tax
             </span>
             <span class="col d-flex flex-row-reverse">
-                9
+                {{this.tax}}
             </span>
         </div>
         <div class="row w-50 d-flex align-self-end">
@@ -31,11 +32,11 @@
                 Total
             </span>
             <span class="col d-flex flex-row-reverse">
-                109
+                {{this.total}}
             </span>
         </div>
     </div>
     <div class="w-100 d-flex flex-row-reverse">
         <button type="button" class="btn btn-success">Check out</button>
     </div>
-</main>
+</GeneralContainer>
