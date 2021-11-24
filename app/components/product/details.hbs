@@ -2,7 +2,7 @@
 
     {{!-- Header --}}
     <section>
-        <h3>Beats Solo Wireless Headphones</h3>
+        <h3>{{@name}}</h3>
         <div class="text-warning">
             <span class="material-icons">star</span>
             <span class="material-icons">star</span>
@@ -13,11 +13,12 @@
     </section>
 
     {{!-- Price --}}
-    <section>
-        <del class="small text-black-50">$199.99</del>
-        <i class="text-danger fw-bold">$99.99</i>
+    <section class="{{unless @isDetails 'h4'}}">
+        <del class="small text-black-50">{{currency @price.original}}</del>
+        <i class="text-danger fw-bold">{{currency @price.current}}</i>
     </section>
 
+    {{#if @isDetails}}
     <div>
         <h5>Color</h5>
         <div class="product-colors active-{{@color}}">
@@ -27,4 +28,5 @@
             {{/each}}
         </div>
     </div>
+    {{/if}}
 </div>

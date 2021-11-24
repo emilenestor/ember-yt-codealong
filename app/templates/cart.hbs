@@ -16,7 +16,7 @@
                 Subtotal
             </div>
             <span class="col d-flex flex-row-reverse">
-                {{this.subtotal}}
+                {{currency this.subtotal}}
             </span>
         </div>
         <div class="row w-50 d-flex align-self-end">
@@ -24,7 +24,7 @@
                 Tax
             </span>
             <span class="col d-flex flex-row-reverse">
-                {{this.tax}}
+                {{currency this.tax}}
             </span>
         </div>
         <div class="row w-50 d-flex align-self-end">
@@ -32,7 +32,7 @@
                 Total
             </span>
             <span class="col d-flex flex-row-reverse">
-                {{this.total}}
+                {{currency this.total}}
             </span>
         </div>
     </div>
