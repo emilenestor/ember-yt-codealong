@@ -30,4 +30,17 @@
   span {
     font-size: 32px;
   }
+
+  .cart-count{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    background-color: red;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+  }
 }

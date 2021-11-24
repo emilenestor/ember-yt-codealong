@@ -20,5 +20,4 @@ export default class ItemController extends Controller {
   toggleZoom() {
     this.isZoomed = !this.isZoomed;
   }
-
 }
