@@ -11,9 +11,16 @@
         <li class="breadcrumb-item">Shopping Cart</li>
     </ol>
     {{#each this.shoppingCart.itemList as |item|}}
-        <div class="d-flex align-items-center">
-            <h4>{{item.name}}</h4>
+    <div class="cart-item d-flex align-items-center">
+        <div class="cart-item-thumbnail">
+            <img src={{item.image}} alt="">
         </div>
+        <div class="ml-3">
+            <h4>{{item.name}}</h4>
+            <i class="font-weight-bold">{{currency item.price}}</i>
+        </div>
+        <input type="number" class="ms-auto" value={{item.count}} {{on "input" (fn this.updateItemCount item)}}>
+    </div>
     {{/each}}
     <div class="d-flex flex-column mb-5">
         <div class="row w-50 d-flex align-self-end">
